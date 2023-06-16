@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stránka uživatele</title>
+</head>
+<body>
+<div><h3>Stránka uživatele:</h3></div>
+<div>
+<table>
+    <tr>
+        <td>Jméno:</td>
+        <td>{{ person }}</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>{{ person.email }}</td>
+    </tr>
+    <tr>
+        <td>Věk:</td>
+        <td>{{ person.user_age }}</td>
+    </tr>
+</table>
+</div>
+
+<div>
+    <a href="{% url 'users' %}">Zpět</a>
+</div>

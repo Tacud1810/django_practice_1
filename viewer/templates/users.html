@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uživatelé</title>
+</head>
+<body>
+<div><h2>Seznam uživatelů:</h2></div>
+<div>
+    <table>
+        <tr>
+            <th style="width: 150px">Jméno</th>
+            <th></th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td><a href="{% url 'user' user.id %}"> {{ user }}</a></td>
+            <td> <a href="{% url 'update_user' user.id %}">upravit</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div>
+    <a href="{% url 'home' %}">Zpět</a>
+</div>
+<div>
+    <a href="{% url 'add_user' %}">Přidat uživatele</a>
+</div>
+</body>
+</html>
